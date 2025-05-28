@@ -1,0 +1,73 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 15% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 200 15% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 200 15% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 195 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 200 15% 10%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 200 15% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 195 100% 40%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 15% 15%;
+    --input: 200 15% 15%;
+    --ring: 195 100% 50%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+}
+
+.glassmorphism {
+  @apply bg-black/20 backdrop-blur-lg border border-zappbot-blue/20 shadow-lg shadow-zappbot-blue/10;
+}
+
+.neon-text {
+  @apply text-zappbot-blue;
+  text-shadow: 0 0 5px theme('colors.zappbot.blue'), 
+               0 0 20px theme('colors.zappbot.blue');
+}
+
+.neon-border {
+  @apply border-zappbot-blue;
+  box-shadow: 0 0 5px theme('colors.zappbot.blue'), 
+              inset 0 0 5px theme('colors.zappbot.blue');
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+}

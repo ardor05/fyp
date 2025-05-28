@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charging Remote Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #001428;
+            color: white;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #1E90FF;
+        }
+        .button {
+            background-color: #1E90FF;
+            color: black;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            width: calc(33.33% - 10px);
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0078FF;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgba(0,0,0,0.3);
+            min-height: 100px;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #F44336;
+        }
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #ddd;
+            font-size: 18px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EV Charging Remote Control</h1>
+        
+        <div class="section-title">Select Parking Spot</div>
+        <div class="button-grid" id="spotButtons">
+            <!-- Parking spot buttons will be generated here -->
+        </div>
+        
+        <div id="status" class="status">
+            Ready to connect to laptop...<br>
+            Select a parking spot to start charging.
+        </div>
+    </div>
+
+    <script>
+        // Generate buttons for all 20 parking spots
+        const spotButtonsContainer = document.getElementById('spotButtons');
+        const statusElement = document.getElementById('status');
+        
+        // Create buttons for each parking spot
+        for (let i = 1; i <= 20; i++) {
+            const button = document.createElement('button');
+            button.className = 'button';
+            button.textContent = `Spot ${i}`;
+            button.dataset.spotNumber = i.toString();
+            
+            button.addEventListener('click', async function() {
+                const spotNumber = this.dataset.spotNumber;
+                activateSpot(spotNumber);
+            });
+            
+            spotButtonsContainer.appendChild(button);
+        }
+        
+        // Function to activate a parking spot
+        async function activateSpot(spotNumber) {
+            statusElement.innerHTML = `Connecting to laptop for Spot ${spotNumber}...`;
+            statusElement.className = 'status';
+            
+            try {
+                const response = await fetch(`http://192.168.1.159:5000/run-spot/${spotNumber}`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    statusElement.innerHTML = `
+                        <span class="success">✓ Connected successfully!</span><br>
+                        <strong>Parking Spot ${spotNumber} activated</strong><br>
+                        Laptop: ${data.hostname}<br>
+                        IP: ${data.ip_address}<br>
+                        Time: ${data.timestamp}
+                    `;
+                } else {
+                    statusElement.innerHTML = `
+                        <span class="error">✗ Error:</span><br>
+                        ${data.message}
+                    `;
+                }
+            } catch (error) {
+                statusElement.innerHTML = `
+                    <span class="error">✗ Connection failed:</span><br>
+                    Could not connect to the laptop server.<br>
+                    Make sure you're on the same WiFi network.
+                `;
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>
