@@ -1,0 +1,678 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robotnik_navigation_msgs/action/Move",
+      "fields": [
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_navigation_msgs/action/Move_Goal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_navigation_msgs/action/Move_Result"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_navigation_msgs/action/Move_Feedback"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "send_goal_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_navigation_msgs/action/Move_SendGoal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "get_result_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_navigation_msgs/action/Move_GetResult"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_navigation_msgs/action/Move_FeedbackMessage"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "geometry_msgs/msg/Pose2D",
+        "fields": [
+          {
+            "name": "x",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "y",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "theta",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "geometry_msgs/msg/Twist",
+        "fields": [
+          {
+            "name": "linear",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "geometry_msgs/msg/Vector3"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "angular",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "geometry_msgs/msg/Vector3"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "geometry_msgs/msg/Vector3",
+        "fields": [
+          {
+            "name": "x",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "y",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "z",
+            "type": {
+              "type_id": 11,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_common_msgs/msg/Response",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_Feedback",
+        "fields": [
+          {
+            "name": "remaining",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "geometry_msgs/msg/Pose2D"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "current_velocity",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "geometry_msgs/msg/Twist"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_FeedbackMessage",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "feedback",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_Feedback"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_GetResult",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_GetResult_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_GetResult_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_GetResult_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_GetResult_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_GetResult_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_GetResult_Response",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_Result"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_Goal",
+        "fields": [
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "geometry_msgs/msg/Pose2D"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "maximum_velocity",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "geometry_msgs/msg/Twist"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_Result",
+        "fields": [
+          {
+            "name": "response",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_common_msgs/msg/Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_SendGoal",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_navigation_msgs/action/Move_Goal"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Response",
+        "fields": [
+          {
+            "name": "accepted",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move",
+      "hash_string": "RIHS01_b20a48ef875a63a4068e36d444daaffbc88d4e37a4643b4a3b9c3b345e9b1d3b"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "geometry_msgs/msg/Pose2D",
+      "hash_string": "RIHS01_d68efa5b46e70f7b16ca23085474fdac5a44b638783ec42f661da64da4724ccc"
+    },
+    {
+      "type_name": "geometry_msgs/msg/Twist",
+      "hash_string": "RIHS01_9c45bf16fe0983d80e3cfe750d6835843d265a9a6c46bd2e609fcddde6fb8d2a"
+    },
+    {
+      "type_name": "geometry_msgs/msg/Vector3",
+      "hash_string": "RIHS01_cc12fe83e4c02719f1ce8070bfd14aecd40f75a96696a67a2a1f37f7dbb0765d"
+    },
+    {
+      "type_name": "robotnik_common_msgs/msg/Response",
+      "hash_string": "RIHS01_0184e7be9e26ab330fac00294455033429912e8580563c03b3d11f7106718529"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_Feedback",
+      "hash_string": "RIHS01_373ba4c31c64e8d0b1af450a32f63b89fb1b794cbb5105033c67f740402aa148"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_FeedbackMessage",
+      "hash_string": "RIHS01_9fee70919907b0c1ee6b0a995d6cd0cc37e3826b9bd5856d324bff009dc7ac41"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_GetResult",
+      "hash_string": "RIHS01_fbafef0970f06acf240083f06563c93f8c4a7f8f83ee6bf37ba1fb619c363d67"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_GetResult_Event",
+      "hash_string": "RIHS01_502220efcb526618ddc5f11e57f2176a646e658125761016b42df5284daab8bd"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_GetResult_Request",
+      "hash_string": "RIHS01_887769e7a62a1802564b803343acc5195b969281b6231131901d99299ec0c449"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_GetResult_Response",
+      "hash_string": "RIHS01_5185f6d378aa115a8631d513fce159ffe2ded72fcf8a47359b5b5fa138cfa856"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_Goal",
+      "hash_string": "RIHS01_f4897c37826c93f06fc1a2c55157dbe4ff36817429a267c8fe2c7ceca7414453"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_Result",
+      "hash_string": "RIHS01_8f6b55e77d15a375097689732f3921415bf1391d60f843bb124d07e62ad3a61f"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_SendGoal",
+      "hash_string": "RIHS01_bee70f7cd684de5dda079acbf3ff7f808c42cc029c68b816b6d2b5f96fa70dcc"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Event",
+      "hash_string": "RIHS01_d57410ff1f6d81640bcbe19414a7d01b42a480a12cbc01d3347be99600ecb9f2"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Request",
+      "hash_string": "RIHS01_4b9f9bd84ee253888a74fd844d1d09961b09321747d302eb33627bc906ca1b95"
+    },
+    {
+      "type_name": "robotnik_navigation_msgs/action/Move_SendGoal_Response",
+      "hash_string": "RIHS01_d05ffb715bf1690ce6d61ec978026d5fa1353d8158f563a7daa5be48f87f1221"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

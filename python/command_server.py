@@ -46,15 +46,14 @@ def run_spot(spot_number):
         script_dir = os.path.dirname(os.path.abspath(__file__))
         spot_script_path = os.path.join(script_dir, 'spot_template.py')
         
-        # Command to open a new terminal window with a distinctive title
-        # Use /K to keep the window open after the command finishes
-        terminal_command = f'start "PARKING SPOT {spot_number} - {time.strftime("%H:%M:%S")}" cmd.exe /k "python \"{spot_script_path}\" {spot_number}"'
+        # Command to open a new Windows Terminal window running WSL
+        # The command will run spot_template.py with the spot number
+        terminal_command = f'wt.exe -p "Ubuntu" -d "~" wsl python3 "{spot_script_path}" {spot_number}'
         
         # Log the command being executed
         print(f"Executing command: {terminal_command}")
         
         # Execute the command to open a new terminal window
-        # shell=True is required for the 'start' command to work
         process = subprocess.Popen(terminal_command, shell=True)
         
         # Get the laptop's IP address
@@ -64,7 +63,7 @@ def run_spot(spot_number):
         # Log the request information
         client_ip = request.remote_addr
         print(f"Request from {client_ip} at {time.strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"Opening terminal window and running {hello_world_path}")
+        print(f"Opening new terminal window and running {spot_script_path}")
         
         return jsonify({
             'success': True,

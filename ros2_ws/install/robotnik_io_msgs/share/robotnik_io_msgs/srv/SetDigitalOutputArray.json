@@ -1,0 +1,270 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_common_msgs/msg/Response",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_io_msgs/msg/DigitalIO",
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "value",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Request",
+        "fields": [
+          {
+            "name": "output",
+            "type": {
+              "type_id": 145,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_io_msgs/msg/DigitalIO"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Response",
+        "fields": [
+          {
+            "name": "response",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_common_msgs/msg/Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray",
+      "hash_string": "RIHS01_4f9de1d38a90e97040118115b0a833e437087deacd3c00b07e63d13f44686226"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "robotnik_common_msgs/msg/Response",
+      "hash_string": "RIHS01_0184e7be9e26ab330fac00294455033429912e8580563c03b3d11f7106718529"
+    },
+    {
+      "type_name": "robotnik_io_msgs/msg/DigitalIO",
+      "hash_string": "RIHS01_84536cd8278243ff3237071e8a7af0abbf671149d573149d12f65755b4b58e58"
+    },
+    {
+      "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Event",
+      "hash_string": "RIHS01_cd3a19b47f8a1001f446291ea4d66395cd2ee12a14fed3c2d049b851e40fe3cc"
+    },
+    {
+      "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Request",
+      "hash_string": "RIHS01_5d1b9ca7e2dc24497b15d4e13d88ca316074826b6544329f53bbe0523142e166"
+    },
+    {
+      "type_name": "robotnik_io_msgs/srv/SetDigitalOutputArray_Response",
+      "hash_string": "RIHS01_f457bd46c3f4bf9109f4e6fd250e3b9d0bcc528b96edb585db30830b997afca4"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

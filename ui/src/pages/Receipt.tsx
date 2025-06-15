@@ -60,7 +60,7 @@ const Receipt = () => {
           
           <div className="glassmorphism rounded-xl p-4 text-center mt-4 sm:mt-6">
             <p className="text-white text-sm sm:text-base">Charger has been unplugged</p>
-            <p className="text-zappbot-blue font-medium mt-1 text-sm sm:text-base">Returning to base</p>
+            <p className="text-zappbot-blue font-medium mt-1 text-sm sm:text-base animate-pulse">Robot returning to base...</p>
           </div>
           
           <Button 

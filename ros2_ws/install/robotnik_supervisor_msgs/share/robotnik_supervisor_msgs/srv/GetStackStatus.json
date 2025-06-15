@@ -1,0 +1,241 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus",
+      "fields": [
+        {
+          "name": "request_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Request"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "response_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Response"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "event_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Event"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_common_msgs/msg/Response",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Request",
+        "fields": [
+          {
+            "name": "name",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Response",
+        "fields": [
+          {
+            "name": "response",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "robotnik_common_msgs/msg/Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "status",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus",
+      "hash_string": "RIHS01_093eb3b3629c627acbc3fce888063b8a81c0240f481eb2b793712002fe02ee48"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "robotnik_common_msgs/msg/Response",
+      "hash_string": "RIHS01_0184e7be9e26ab330fac00294455033429912e8580563c03b3d11f7106718529"
+    },
+    {
+      "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Event",
+      "hash_string": "RIHS01_5ea8c2ee1052ccc81d694b13f2687616ae3359eda310abf29154f695828b8266"
+    },
+    {
+      "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Request",
+      "hash_string": "RIHS01_79614c1259a01588c94809f268d1db78cb94c732d0924f3bd45a9fc5e53635e0"
+    },
+    {
+      "type_name": "robotnik_supervisor_msgs/srv/GetStackStatus_Response",
+      "hash_string": "RIHS01_08f7d2b25c02e1ec744fed5b7ad938ce8b49517ebaf1625f6bb1306f8956c2ac"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    }
+  ]
+}

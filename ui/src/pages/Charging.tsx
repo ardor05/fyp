@@ -52,6 +52,7 @@ const Charging = () => {
         setTimeLeft("Completed");
         setPercentComplete(100);
         setShowUnplugAlert(true);
+        clearInterval(timer);
         return;
       }
       
@@ -186,7 +187,7 @@ const Charging = () => {
         </AlertDialogContent>
       </AlertDialog>
       
-      <AlertDialog open={showConfirmationAlert} onOpenChange={setShowConfirmationAlert}>
+      <AlertDialog open={showConfirmationAlert}>
         <AlertDialogContent className="bg-zappbot-black-light border border-zappbot-blue/30">
           <AlertDialogHeader>
             <AlertDialogTitle className="text-xl text-zappbot-blue">Confirmation</AlertDialogTitle>
@@ -195,9 +196,7 @@ const Charging = () => {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="border-gray-700 text-gray-300">
-              Not Yet
-            </AlertDialogCancel>
+            
             <AlertDialogAction 
               className="bg-zappbot-blue text-white hover:bg-zappbot-blue/80"
               onClick={handleConfirmPlacement}

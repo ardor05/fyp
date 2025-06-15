@@ -1,0 +1,56 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robotnik_io_msgs/msg/RegisterArray",
+      "fields": [
+        {
+          "name": "registers",
+          "type": {
+            "type_id": 145,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "robotnik_io_msgs/msg/Register"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "robotnik_io_msgs/msg/Register",
+        "fields": [
+          {
+            "name": "address",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "value",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "robotnik_io_msgs/msg/RegisterArray",
+      "hash_string": "RIHS01_e51f80990e64153d6a99f6ca063e53ad64cf2cabb45c6753eb508ee5c6454bbf"
+    },
+    {
+      "type_name": "robotnik_io_msgs/msg/Register",
+      "hash_string": "RIHS01_ed69a95aac0c32f1df12fbc48da44408c9d050db96cc822b63899f86b08bf87f"
+    }
+  ]
+}

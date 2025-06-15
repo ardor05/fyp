@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robotnik_io_msgs/msg/AnalogIO",
+      "fields": [
+        {
+          "name": "id",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "value",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "robotnik_io_msgs/msg/AnalogIO",
+      "hash_string": "RIHS01_754c53e5520d30ec4585b4b32198892b568361b3d7d78acc56a0602cb43eb8a1"
+    }
+  ]
+}

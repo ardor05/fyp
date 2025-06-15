@@ -72,13 +72,13 @@ const DigitalReceipt: React.FC<DigitalReceiptProps> = ({
         
         <div className="flex justify-between">
           <span className={`text-gray-400 ${fontSize}`}>Rate</span>
-          <span className={`text-white font-medium ${fontSize}`}>RM 1.00/kWh</span>
+          <span className={`text-white font-medium ${fontSize}`}>RM 1.50/kWh</span>
         </div>
         
         <div className="border-t border-zappbot-blue/30 pt-3 mt-3">
           <div className="flex justify-between">
             <span className="text-white font-bold">Total</span>
-            <span className="text-zappbot-blue font-bold neon-text">RM {totalPrice.toFixed(2)}</span>
+            <span className="text-zappbot-blue font-bold neon-text">RM {(totalKwh * 1.5).toFixed(2)}</span>
           </div>
         </div>
       </div>

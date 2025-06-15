@@ -4,14 +4,14 @@ import { Zap } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface ChargingSummaryProps {
-  chargingMinutes: number;
+  totalKwh: number;
 }
 
-const ChargingSummary: React.FC<ChargingSummaryProps> = ({ chargingMinutes }) => {
-  // Calculate kWh based on charging time (using rate of 0.9 kWh per minute)
+const ChargingSummary: React.FC<ChargingSummaryProps> = ({ totalKwh }) => {
+  // Calculate charging duration based on kWh (using rate of 0.9 kWh per minute)
   const chargingRate = 0.9; // kWh per minute
-  const totalKwh = parseFloat((chargingMinutes * chargingRate).toFixed(2));
-  const totalPrice = parseFloat(totalKwh.toFixed(2)); // RM1 per kWh
+  const chargingMinutes = Math.ceil(totalKwh / chargingRate);
+  const totalPrice = parseFloat((totalKwh * 1.5).toFixed(2)); // RM1.50 per kWh
   
   // Format charging duration
   const formatDuration = (minutes: number) => {
@@ -45,7 +45,7 @@ const ChargingSummary: React.FC<ChargingSummaryProps> = ({ chargingMinutes }) =>
         </div>
         
         <div className="text-gray-400 text-sm sm:text-base">Price Rate:</div>
-        <div className="text-right font-semibold text-white text-sm sm:text-base">RM 1.00/kWh</div>
+        <div className="text-right font-semibold text-white text-sm sm:text-base">RM 1.50/kWh</div>
         
         <div className="text-gray-400 text-base sm:text-lg pt-2">Total Price:</div>
         <div className="text-right font-bold text-base sm:text-lg text-zappbot-blue pt-2">

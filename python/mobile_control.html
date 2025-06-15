@@ -106,7 +106,7 @@
             statusElement.className = 'status';
             
             try {
-                const response = await fetch(`http://192.168.1.159:5000/run-spot/${spotNumber}`);
+                const response = await fetch(`http://172.22.146.227:5000/run-spot/${spotNumber}`);
                 const data = await response.json();
                 
                 if (data.success) {

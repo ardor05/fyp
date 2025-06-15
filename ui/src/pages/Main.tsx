@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -55,7 +54,7 @@ const Main = () => {
         toast.info(`Connecting to laptop server for Spot ${spotNumber}...`);
         // Use the actual IP address instead of localhost
         // This endpoint will open a terminal window on the laptop
-        const response = await fetch(`http://192.168.1.159:5000/run-spot/${spotNumber}`);
+        const response = await fetch(`http://172.22.146.227:5000/run-spot/${spotNumber}`);
         const data = await response.json();
         
         if (data.success) {
@@ -88,7 +87,7 @@ const Main = () => {
           <KwhInputSelect value={desiredKwh} onValueChange={setDesiredKwh} />
           
           {desiredKwh && parseFloat(desiredKwh) > 0 && (
-            <ChargingSummary chargingMinutes={Math.ceil(parseFloat(desiredKwh) / 0.9)} />
+            <ChargingSummary totalKwh={parseFloat(desiredKwh)} />
           )}
           
           <Button 

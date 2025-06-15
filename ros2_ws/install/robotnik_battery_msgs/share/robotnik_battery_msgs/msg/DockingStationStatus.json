@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "robotnik_battery_msgs/msg/DockingStationStatus",
+      "fields": [
+        {
+          "name": "operation_mode",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "contact_relay_status",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "charger_relay_status",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "robotnik_battery_msgs/msg/DockingStationStatus",
+      "hash_string": "RIHS01_ed37fce783a8b7cb366ba5f8ae1052dce6ab5dfd3aba54ef4bc012eaf94cc5fa"
+    }
+  ]
+}
