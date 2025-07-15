@@ -69,9 +69,9 @@ robotnik_io_msgs__srv__SetRegisters_Event__get_type_hash(
 
 // Include directives for referenced types
 #include "robotnik_common_msgs/msg/detail/response__functions.h"
+#include "robotnik_io_msgs/msg/detail/register__functions.h"
 #include "service_msgs/msg/detail/service_event_info__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
-#include "robotnik_io_msgs/msg/detail/register__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

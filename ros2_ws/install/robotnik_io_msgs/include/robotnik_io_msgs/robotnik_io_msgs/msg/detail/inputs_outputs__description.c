@@ -23,8 +23,8 @@ robotnik_io_msgs__msg__InputsOutputs__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "robotnik_io_msgs/msg/detail/analog_io__functions.h"
 #include "robotnik_io_msgs/msg/detail/digital_io__functions.h"
+#include "robotnik_io_msgs/msg/detail/analog_io__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

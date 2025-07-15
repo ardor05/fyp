@@ -1,1 +1,5 @@
-/home/amr01/fyp/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_docking/config/dock_database.yaml
+docks:
+  dock0:
+    type: 'rosmaster_x3_dock'
+    frame: map
+    pose: [-4.96, 1.5, 0.0]

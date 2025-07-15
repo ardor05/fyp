@@ -1,1 +1,0 @@
-/home/amr01/fyp/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_bringup/scripts/rosmaster_x3_navigation_parking.sh

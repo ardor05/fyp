@@ -69,8 +69,8 @@ robotnik_supervisor_msgs__srv__StartModule_Event__get_type_hash(
 
 // Include directives for referenced types
 #include "builtin_interfaces/msg/detail/time__functions.h"
-#include "robotnik_common_msgs/msg/detail/response__functions.h"
 #include "service_msgs/msg/detail/service_event_info__functions.h"
+#include "robotnik_common_msgs/msg/detail/response__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

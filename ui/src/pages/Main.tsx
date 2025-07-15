@@ -31,7 +31,11 @@ const Main = () => {
     const kwhValue = parseFloat(desiredKwh);
     const chargingMinutes = Math.ceil(kwhValue / 0.9); // Using 0.9 kWh per minute
     
-    // Store the charging data in session storage
+    if (!location || !parkingSpot || !chargingMinutes) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+
     const startTime = new Date();
     const chargingData = {
       location,
@@ -44,36 +48,47 @@ const Main = () => {
     
     sessionStorage.setItem('chargingData', JSON.stringify(chargingData));
     
-    // For any parking spot, run the corresponding spot script on the laptop
     console.log('Selected parking spot:', parkingSpot);
     if (parkingSpot && !isNaN(Number(parkingSpot))) {
       const spotNumber = Number(parkingSpot);
       console.log(`Parking Spot ${spotNumber} selected, making API call...`);
       
       try {
-        toast.info(`Connecting to laptop server for Spot ${spotNumber}...`);
-        // Use the actual IP address instead of localhost
-        // This endpoint will open a terminal window on the laptop
-        const response = await fetch(`http://172.22.146.227:5000/run-spot/${spotNumber}`);
+        toast.info(`Activating Parking Spot ${spotNumber}...`);
+        
+        // Show loading state
+        const loadingToast = toast.loading('Connecting to server...');
+        
+        // Use the current host's IP for the API URL
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const apiBaseUrl = isLocalhost 
+          ? 'http://172.22.146.227:5000'  // WSL2 IP for local development
+          : `http://${window.location.hostname}:5000`;  // Same host as the frontend
+          
+        const response = await fetch(`${apiBaseUrl}/run-spot/${spotNumber}`);
         const data = await response.json();
         
+        // Update loading toast with result
+        toast.dismiss(loadingToast);
+        
         if (data.success) {
-          toast.success(`Connected to laptop: ${data.ip_address}`);
           toast.success(`Parking Spot ${spotNumber} activated successfully`);
           console.log('Server response:', data);
+          
+          // Navigate to charging page after a short delay
+          setTimeout(() => {
+            navigate('/charging');
+          }, 1000);
+          
         } else {
-          toast.error(`Error: ${data.message}`);
+          toast.error(data.message || `Failed to activate spot ${spotNumber}`);
           console.error('Server error:', data);
         }
       } catch (error) {
         console.error('Error connecting to server:', error);
-        toast.error("Could not connect to laptop server. Make sure it's running.");
+        toast.error("Could not connect to the server. Please try again.");
       }
     }
-    
-    // Navigate to charging page
-    toast.success("Charging initiated!");
-    navigate('/charging');
   };
   
   return (
@@ -101,7 +116,7 @@ const Main = () => {
       </div>
       
       <footer className="text-center text-gray-500 text-xs sm:text-sm mt-6 sm:mt-10">
-        <p>© {new Date().getFullYear()} ZappBot | Futuristic EV Charging</p>
+        <p> {new Date().getFullYear()} ZappBot | Futuristic EV Charging</p>
       </footer>
     </div>
   );

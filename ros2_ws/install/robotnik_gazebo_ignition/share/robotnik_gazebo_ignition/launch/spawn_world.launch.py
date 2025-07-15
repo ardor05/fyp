@@ -44,7 +44,7 @@ def generate_launch_description():
     arg = ExtendedArgument(
         name='world',
         description='world in gazebo classic',
-        default_value='parking.world',
+        default_value='parking.sdf',
         # default_value='warehouse_big.sdf',
     )
     add_to_launcher.add_arg(arg)

@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => ({
     port: 3000,
     strictPort: true,  // Don't try another port if 3000 is taken
     hmr: {
-      host: "localhost",  // Keep HMR on localhost
+      host: "0.0.0.0",  // Allow HMR from all IP addresses
+      port: 3001,       // Use a dedicated port for HMR
     },
   },
   plugins: [

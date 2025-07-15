@@ -1,1 +1,4 @@
-/home/amr01/fyp/ros2_ws/build/yahboom_rosmaster_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/yahboom_rosmaster_msgs
+action/TimedRotation.action
+action/TimedRotation.idl
+srv/SetCleaningState.idl
+srv/SetCleaningState.srv

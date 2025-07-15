@@ -1,1 +1,4 @@
-/home/amr01/fyp/ros2_ws/build/yahboom_rosmaster_msgs/ament_cmake_environment_hooks/local_setup.dsv
+source;share/yahboom_rosmaster_msgs/environment/ament_prefix_path.sh
+source;share/yahboom_rosmaster_msgs/environment/library_path.sh
+source;share/yahboom_rosmaster_msgs/environment/path.sh
+source;share/yahboom_rosmaster_msgs/environment/pythonpath.sh

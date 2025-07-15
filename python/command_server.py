@@ -33,53 +33,47 @@ def index():
 
 @app.route('/run-spot/<int:spot_number>', methods=['GET'])
 def run_spot(spot_number):
-    """Open a new terminal window and run the spot script for the specified parking spot"""
-    # Validate spot number
-    if spot_number < 1 or spot_number > 20:
-        return jsonify({
-            'success': False,
-            'message': f'Invalid spot number: {spot_number}. Must be between 1 and 20.'
-        })
-    
+    """Handle spot activation requests"""
     try:
-        # Get the absolute path to the spot_template.py script
+        # Get client IP
+        client_ip = request.remote_addr
+        is_local = client_ip in ['127.0.0.1', 'localhost'] or client_ip.startswith('192.168.') or client_ip.startswith('172.')
+        
+        if not is_local:
+            # For remote requests, just log and return success without opening terminal
+            print(f"Remote request from {client_ip} - logging only")
+            return jsonify({
+                'success': True,
+                'message': f'Request received for Parking Spot {spot_number} (remote)',
+                'ip_address': socket.gethostbyname(socket.gethostname()),
+                'hostname': socket.gethostname(),
+                'client_ip': client_ip,
+                'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
+            })
+
+        # Original logic for local requests - open terminal
         script_dir = os.path.dirname(os.path.abspath(__file__))
         spot_script_path = os.path.join(script_dir, 'spot_template.py')
-        
-        # Command to open a new Windows Terminal window running WSL
-        # The command will run spot_template.py with the spot number
         terminal_command = f'wt.exe -p "Ubuntu" -d "~" wsl python3 "{spot_script_path}" {spot_number}'
         
-        # Log the command being executed
-        print(f"Executing command: {terminal_command}")
-        
-        # Execute the command to open a new terminal window
+        print(f"Executing: {terminal_command}")
         process = subprocess.Popen(terminal_command, shell=True)
-        
-        # Get the laptop's IP address
-        hostname = socket.gethostname()
-        ip_address = socket.gethostbyname(hostname)
-        
-        # Log the request information
-        client_ip = request.remote_addr
-        print(f"Request from {client_ip} at {time.strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"Opening new terminal window and running {spot_script_path}")
         
         return jsonify({
             'success': True,
             'message': f'Terminal window opened for Parking Spot {spot_number}',
-            'ip_address': ip_address,
-            'hostname': hostname,
+            'ip_address': socket.gethostbyname(socket.gethostname()),
+            'hostname': socket.gethostname(),
             'client_ip': client_ip,
             'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
         })
+        
     except Exception as e:
-        error_message = str(e)
-        print(f"Error: {error_message}")
         return jsonify({
             'success': False,
-            'message': f'Error executing script: {error_message}'
-        })
+            'error': str(e),
+            'message': f'Failed to process spot {spot_number}'
+        }), 500
 
 if __name__ == '__main__':
     # Get the laptop's IP address

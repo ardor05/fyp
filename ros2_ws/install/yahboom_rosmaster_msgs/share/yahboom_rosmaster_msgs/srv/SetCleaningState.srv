@@ -1,1 +1,5 @@
-/home/amr01/fyp/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_msgs/srv/SetCleaningState.srv
+# Request
+bool desired_cleaning_state  # Request: true to start cleaning, false to stop
+---
+bool success                 # Response: whether the request was successful
+string message               # Response: information about the result

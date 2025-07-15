@@ -546,14 +546,14 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file:///home/amr01/fyp/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_gazebo/models/parking/meshes/parking lot.dae</uri>
+              <uri>file:///home/amr01/fyp/ros2_ws/src/robotnik_simulation/robotnik_gazebo_ignition/models/parking/meshes/parking lot.dae</uri>
             </mesh>
           </geometry>
         </visual>
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file:///home/amr01/fyp/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_gazebo/models/parking/meshes/parking lot.dae</uri>
+              <uri>file:///home/amr01/fyp/ros2_ws/src/robotnik_simulation/robotnik_gazebo_ignition/models/parking/meshes/parking lot.dae</uri>
             </mesh>
           </geometry>
         </collision>
@@ -572,7 +572,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-1.3557664284482411 1.862871666396577 0.038597730916141923 -0.002526636727983287 1.9697022552372668e-06 -3.3901629179114712e-05</pose>
+      <pose>-0.79440385427696159 5.5708752493838256 0.017699627892453728 -0.0011576748266743779 1.2535556862012503e-06 -1.4544765606755759e-05</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
